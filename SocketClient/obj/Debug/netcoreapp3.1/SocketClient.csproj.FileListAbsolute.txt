@@ -1,0 +1,13 @@
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\bin\Debug\netcoreapp3.1\SocketClient.exe
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\bin\Debug\netcoreapp3.1\SocketClient.deps.json
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\bin\Debug\netcoreapp3.1\SocketClient.runtimeconfig.json
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\bin\Debug\netcoreapp3.1\SocketClient.runtimeconfig.dev.json
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\bin\Debug\netcoreapp3.1\SocketClient.dll
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\bin\Debug\netcoreapp3.1\SocketClient.pdb
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\obj\Debug\netcoreapp3.1\SocketClient.csprojAssemblyReference.cache
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\obj\Debug\netcoreapp3.1\SocketClient.AssemblyInfoInputs.cache
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\obj\Debug\netcoreapp3.1\SocketClient.AssemblyInfo.cs
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\obj\Debug\netcoreapp3.1\SocketClient.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\obj\Debug\netcoreapp3.1\SocketClient.dll
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\obj\Debug\netcoreapp3.1\SocketClient.pdb
+C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketClient\obj\Debug\netcoreapp3.1\SocketClient.genruntimeconfig.cache
