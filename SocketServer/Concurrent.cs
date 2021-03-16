@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using System.Collections.Generic;
 
 namespace Concurrent
 {
@@ -12,18 +13,16 @@ namespace Concurrent
     {
         // todo [Assignment]: implement required attributes specific for concurrent server
         TcpListener server = null;
+        List<string> votes = new List<string>();
 
         public ConcurrentServer(Setting settings) : base(settings)
         {
             // todo [Assignment]: implement required code
-            Console.WriteLine("start1");
             this.settings = settings;
             this.ipAddress = IPAddress.Parse(settings.serverIPAddress);
-
         }
         public override void prepareServer()
         {
-            Console.WriteLine("start2");
             Console.WriteLine(this.ipAddress.ToString() + settings.serverPortNumber);
 
             localEndPoint = new IPEndPoint(this.ipAddress, settings.serverPortNumber);
@@ -69,19 +68,23 @@ namespace Concurrent
         public override string processMessage(String msg)
         {
             //todo 6: check how received messages are processed and handled. 
+            votes.Add(msg);
             Thread.Sleep(settings.serverProcessingTime);
-            string replyMsg = Message.confirmed;
-
+            string replyMsg = Message.confirmed;            
             try
             {
                 switch (msg)
-                {
+                {                    
                     case Message.terminate:
                         //todo 7: when this case is executed?
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("[Server] received from the client -> {0} ", msg);
                         Console.ResetColor();
                         Console.WriteLine("[Server] END : number of clients communicated -> {0} ", this.numOfClients);
+                        foreach (string i in votes)
+                        {
+                            Console.WriteLine(i);
+                        }                        
                         break;
                     default:
                         //todo 8: which part of the protocol is implemented here?
