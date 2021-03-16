@@ -1,4 +1,8 @@
-﻿using Sequential;
+//0966972 Maurice Pakvis
+//0958779 Thomas Visser﻿
+
+
+using Sequential;
 using System;
 //todo [Assignment]: add required namespaces
 using System.Net;
