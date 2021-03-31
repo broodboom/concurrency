@@ -1,7 +1,6 @@
 //0966972 Maurice Pakvis
 //0958779 Thomas Visser﻿
 
-
 using Sequential;
 using System;
 //todo [Assignment]: add required namespaces
@@ -16,8 +15,10 @@ namespace Concurrent
     public class ConcurrentServer : SequentialServer
     {
         // todo [Assignment]: implement required attributes specific for concurrent server
-        TcpListener server = null;
         List<string> votes = new List<string>();
+
+        List<Thread> threads = new List<Thread>();
+        object lockObject = new object();
 
         public ConcurrentServer(Setting settings) : base(settings)
         {
@@ -42,15 +43,21 @@ namespace Concurrent
                     Console.WriteLine("Waiting for incoming connections ... ");
                     Socket connection = listener.Accept();
                     this.numOfClients++;
-                    Console.WriteLine("Connected!");
+                    Console.WriteLine("Connected!");              
 
-                    Thread t = new Thread(() => this.handleConcurrentClient(connection));
-                    t.Start();
+                    ThreadStart threadStart = () => this.handleConcurrentClient(connection);
+                    Thread thread = new Thread(threadStart) { IsBackground = true };
+
+                    lock (lockObject)
+                    {
+                        threads.Add(thread);
+                    }
+
+                    thread.Start();
                 }
                 catch (SocketException e)
                 {
                     Console.WriteLine("SocketException: {0}", e);
-                    server.Stop();
                 }
             }
 
@@ -67,28 +74,42 @@ namespace Concurrent
             data = Encoding.UTF8.GetString(bytes, 0, numByte);
             reply = processMessage(data);
             this.sendMessage(con, reply);
+
+            lock (lockObject)
+            {
+                threads.Remove(Thread.CurrentThread);
+            }
         }
 
         public override string processMessage(String msg)
         {
             //todo 6: check how received messages are processed and handled. 
-            votes.Add(msg);
             Thread.Sleep(settings.serverProcessingTime);
             string replyMsg = Message.confirmed;            
             try
             {
                 switch (msg)
-                {                    
+                {
                     case Message.terminate:
                         //todo 7: when this case is executed?
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("[Server] received from the client -> {0} ", msg);
                         Console.ResetColor();
                         Console.WriteLine("[Server] END : number of clients communicated -> {0} ", this.numOfClients);
+                        lock (lockObject)
+                        {
+                            foreach (var thread in threads)
+                            {
+                                if (thread.ThreadState != ThreadState.Stopped && thread.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
+                                {
+                                    thread.Join();
+                                }
+                            }
+                        }
                         foreach (string i in votes)
                         {
                             Console.WriteLine(i);
-                        }                        
+                        }
                         break;
                     default:
                         //todo 8: which part of the protocol is implemented here?
@@ -96,6 +117,7 @@ namespace Concurrent
                         Console.ForegroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine("[Server] received from the client -> {0} ", msg);
                         Console.ResetColor();
+                        votes.Add(msg);
                         break;
                 }
             }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Thomas\\Downloads\\Courses-main\\ConcurrentCSharp\\SocketClient\\SocketClient.csproj": {}
+    "C:\\Users\\Thomas\\Workspace\\concurrency2\\SocketClient\\SocketClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Thomas\\Downloads\\Courses-main\\ConcurrentCSharp\\SocketClient\\SocketClient.csproj": {
+    "C:\\Users\\Thomas\\Workspace\\concurrency2\\SocketClient\\SocketClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Thomas\\Downloads\\Courses-main\\ConcurrentCSharp\\SocketClient\\SocketClient.csproj",
+        "projectUniqueName": "C:\\Users\\Thomas\\Workspace\\concurrency2\\SocketClient\\SocketClient.csproj",
         "projectName": "SocketClient",
-        "projectPath": "C:\\Users\\Thomas\\Downloads\\Courses-main\\ConcurrentCSharp\\SocketClient\\SocketClient.csproj",
+        "projectPath": "C:\\Users\\Thomas\\Workspace\\concurrency2\\SocketClient\\SocketClient.csproj",
         "packagesPath": "C:\\Users\\Thomas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Thomas\\Downloads\\Courses-main\\ConcurrentCSharp\\SocketClient\\obj\\",
+        "outputPath": "C:\\Users\\Thomas\\Workspace\\concurrency2\\SocketClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",

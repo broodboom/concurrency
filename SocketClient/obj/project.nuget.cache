@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+lPx2H9ksj3rxJOzHMcNrHo1sy8fbtetGC50lipsC8ELEWNLtrEasifiMP5eZbgkBwI8Oo2qBnuFm7zQ1Q1bQg==",
+  "dgSpecHash": "C8S8oOakrt9o0/RmwA/B6QGKPcoagEd/ektlqKn8ihVQ2JCK1UeLEJK5ymS82s+IjpdwoLMMKLf4Ra+mpODdBg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Thomas\\Downloads\\Courses-main\\ConcurrentCSharp\\SocketClient\\SocketClient.csproj",
+  "projectFilePath": "C:\\Users\\Thomas\\Workspace\\concurrency2\\SocketClient\\SocketClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Thomas\\.nuget\\packages\\system.text.json\\4.7.0\\system.text.json.4.7.0.nupkg.sha512"
   ],

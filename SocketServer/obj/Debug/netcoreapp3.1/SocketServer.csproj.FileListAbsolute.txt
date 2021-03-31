@@ -11,3 +11,16 @@ C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketServer\obj\Debug\n
 C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.dll
 C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.pdb
 C:\Users\Thomas\Downloads\Courses-main\ConcurrentCSharp\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.genruntimeconfig.cache
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\bin\Debug\netcoreapp3.1\SocketServer.exe
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\bin\Debug\netcoreapp3.1\SocketServer.deps.json
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\bin\Debug\netcoreapp3.1\SocketServer.runtimeconfig.json
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\bin\Debug\netcoreapp3.1\SocketServer.runtimeconfig.dev.json
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\bin\Debug\netcoreapp3.1\SocketServer.dll
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\bin\Debug\netcoreapp3.1\SocketServer.pdb
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.csprojAssemblyReference.cache
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.AssemblyInfoInputs.cache
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.AssemblyInfo.cs
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.dll
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.pdb
+C:\Users\Thomas\Workspace\concurrency2\SocketServer\obj\Debug\netcoreapp3.1\SocketServer.genruntimeconfig.cache
