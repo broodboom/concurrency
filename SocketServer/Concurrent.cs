@@ -18,7 +18,7 @@ namespace Concurrent
         List<string> votes = new List<string>();
 
         List<Thread> threads = new List<Thread>();
-        object lockObject = new object();
+        private readonly object lockObject = new object();
 
         public ConcurrentServer(Setting settings) : base(settings)
         {
@@ -74,11 +74,6 @@ namespace Concurrent
             data = Encoding.UTF8.GetString(bytes, 0, numByte);
             reply = processMessage(data);
             this.sendMessage(con, reply);
-
-            lock (lockObject)
-            {
-                threads.Remove(Thread.CurrentThread);
-            }
         }
 
         public override string processMessage(String msg)
@@ -100,7 +95,7 @@ namespace Concurrent
                         {
                             foreach (var thread in threads)
                             {
-                                if (thread.ThreadState != ThreadState.Stopped && thread.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
+                                if (thread.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
                                 {
                                     thread.Join();
                                 }
